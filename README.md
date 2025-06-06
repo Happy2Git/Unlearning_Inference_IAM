@@ -1,6 +1,6 @@
 # Towards Lifecycle Unlearning Commitment Management: Measuring Sample-level Unlearning Completeness
 
-**This repository contains the official implementation and resources for the paper "Towards Lifecycle Unlearning Commitment Management: Measuring Sample-level Unlearning Completeness," accepted at Usenix Security 2025.**
+**This repository contains the official implementation and resources for the paper "Towards Lifecycle Unlearning Commitment Management: Measuring Sample-level Unlearning Completeness," accepted at Usenix Security 2025. The ArXiv link will be updated soon.**
 
 ---
 
