@@ -205,5 +205,5 @@ We welcome contributions to improve IAM! Please feel free to submit issues or pu
 
 ## 📄 License
 
-This project is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+This project is licensed under the MIT License.
 ---
