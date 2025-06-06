@@ -1,0 +1,1755 @@
+activation conda
+activation env
+Running on device: CUDA
+Namespace(dataname='cifar10', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=2, SHADOW_AVE_FLAG=True, LOOP=10, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/', SEED_init=42, CLASS_init=0, INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox', 'p_random'], MODEL_CHECK=False)
+shadow_lists: [[0, 1], [2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15], [16, 17], [18, 19]]
+0-th shadow_list: [0, 1]
+Loop 0, SEED 42
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 1, SEED 43
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 2, SEED 44
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 3, SEED 45
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 4, SEED 46
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 5, SEED 47
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 6, SEED 48
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 7, SEED 49
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 8, SEED 50
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 9, SEED 51
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+1-th shadow_list: [2, 3]
+Loop 0, SEED 42
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 1, SEED 43
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 2, SEED 44
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 3, SEED 45
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 4, SEED 46
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 5, SEED 47
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 6, SEED 48
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 7, SEED 49
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 8, SEED 50
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 9, SEED 51
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+2-th shadow_list: [4, 5]
+Loop 0, SEED 42
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 1, SEED 43
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 2, SEED 44
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 3, SEED 45
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 4, SEED 46
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 5, SEED 47
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 6, SEED 48
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 7, SEED 49
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 8, SEED 50
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 9, SEED 51
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+3-th shadow_list: [6, 7]
+Loop 0, SEED 42
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 1, SEED 43
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 2, SEED 44
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 3, SEED 45
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 4, SEED 46
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 5, SEED 47
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 6, SEED 48
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 7, SEED 49
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 8, SEED 50
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 9, SEED 51
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+4-th shadow_list: [8, 9]
+Loop 0, SEED 42
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 1, SEED 43
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 2, SEED 44
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 3, SEED 45
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 4, SEED 46
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 5, SEED 47
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 6, SEED 48
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 7, SEED 49
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 8, SEED 50
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 9, SEED 51
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+5-th shadow_list: [10, 11]
+Loop 0, SEED 42
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 1, SEED 43
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 2, SEED 44
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 3, SEED 45
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 4, SEED 46
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 5, SEED 47
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 6, SEED 48
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 7, SEED 49
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 8, SEED 50
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 9, SEED 51
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+6-th shadow_list: [12, 13]
+Loop 0, SEED 42
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 1, SEED 43
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 2, SEED 44
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 3, SEED 45
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 4, SEED 46
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 5, SEED 47
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 6, SEED 48
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 7, SEED 49
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 8, SEED 50
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 9, SEED 51
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+7-th shadow_list: [14, 15]
+Loop 0, SEED 42
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 1, SEED 43
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 2, SEED 44
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 3, SEED 45
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 4, SEED 46
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 5, SEED 47
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 6, SEED 48
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 7, SEED 49
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 8, SEED 50
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 9, SEED 51
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+8-th shadow_list: [16, 17]
+Loop 0, SEED 42
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 1, SEED 43
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 2, SEED 44
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 3, SEED 45
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 4, SEED 46
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 5, SEED 47
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 6, SEED 48
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 7, SEED 49
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 8, SEED 50
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 9, SEED 51
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+9-th shadow_list: [18, 19]
+Loop 0, SEED 42
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 1, SEED 43
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 2, SEED 44
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 3, SEED 45
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 4, SEED 46
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 5, SEED 47
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 6, SEED 48
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 7, SEED 49
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 8, SEED 50
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+Loop 9, SEED 51
+cifar10_retrain_set_random_500
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_random done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+
+start_print
+Namespace(dataname='cifar10', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=2, SHADOW_AVE_FLAG=True, LOOP=10, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/', SEED_init=42, CLASS_init=0, INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox', 'p_random'], MODEL_CHECK=False, SHADOW_IDXs=[18, 19], SUFFIX='cifar10_retrain_set_random_500')
+dict_keys(['p_Unleak', 'p_LiRA', 'p_LiRA_Online', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_random', 'p_RMIA', 'p_RMIA_online', 'p_IPapprox_proby_simp', 'p_IPapprox_tsm_simp', 'p_IPapprox_carlogi_simp', 'p_IPapprox_losy_simp', 'p_IPapprox_simp_online', 'p_IPapprox_simp_offline', 'p_IPapprox_simp_online_wo_norm'])
+Metric values                  auc    acc    tpr0.0 .-5    .-2    tnr0.0 .-5    .-2    1-mean 1-std  0-mean 0-std  cm-std1 cm-std0
+p_Unleak                       0.6392 0.6060 0.0001 0.0001 0.0306 0.0108 0.0300 0.1881 0.4778 0.1390 0.4144 0.0295
+p_Unleak_var                   0.0030 0.0020 0.0000 0.0000 0.0029 0.0107 0.0169 0.0057 0.0945 0.0862 0.1056 0.0226
+p_LiRA                         0.5351 0.5370 0.0002 0.0002 0.0132 0.0000 3.49e-06 1.06e-02 -3.39e+04 2.04e+06 -2.43e+53 6.02e+55
+p_LiRA_var                     0.0042 0.0032 0.0002 0.0002 0.0025 0.0000 6.58e-06 1.95e-03 3.90e+04 2.64e+06 7.30e+53 1.80e+56
+p_LiRA_Online                  0.5874 0.5853 0.0004 0.0004 0.0118 0.0041 5.12e-02 1.64e-01 4.89e+60 1.55e+61 4.31e+59 8.96e+59
+p_LiRA_Online_var              0.0000 0.0000 0.0000 0.0000 0.0000 0.0123 6.94e-18 2.78e-17 0.00e+00 2.85e+45 7.30e+53 1.01e+53
+p_update_LiRA                  0.6000 0.5853 0.0000 0.0000 0.0128 0.0000 0.0000 0.0413 0.1169 0.3781 0.0038 0.2886
+p_update_LiRA_var              0.0029 0.0038 0.0000 0.0000 0.0019 0.0000 0.0000 0.0045 0.0053 0.0100 0.0011 0.0089
+p_EMIA                         0.6004 0.5690 0.0059 0.0059 0.0714 0.0096 0.0332 0.0807 0.4172 0.2346 0.3410 0.2545
+p_EMIA_var                     0.0042 0.0026 0.0051 0.0051 0.0034 0.0097 0.0025 0.0023 0.0028 0.0019 0.0029 0.0020
+p_EMIA_p                       0.6322 0.6002 0.0000 0.0000 0.0231 0.0398 0.0572 0.1836 0.5496 0.2607 0.4309 0.2225
+p_EMIA_p_var                   0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+p_random                       0.4986 0.5034 0.0003 0.0003 0.0102 0.0000 0.0000 0.0095 0.4986 0.2884 0.5000 0.2886
+p_random_var                   0.0019 0.0013 0.0004 0.0004 0.0012 0.0000 0.0000 0.0014 0.0019 0.0014 0.0006 0.0003
+p_RMIA                         0.6490 0.5923 0.0048 0.0048 0.0779 0.0216 0.0591 0.1464 0.9340 0.0504 0.8898 0.1597
+p_RMIA_var                     0.0031 0.0019 0.0038 0.0038 0.0040 0.0139 0.0031 0.0025 0.0007 0.0042 0.0005 0.0010
+p_RMIA_online                  0.6445 0.5913 0.0095 0.0095 0.0734 0.0154 0.0610 0.1477 0.9536 0.0170 0.9380 0.0553
+p_RMIA_online_var              0.0027 0.0021 0.0037 0.0037 0.0035 0.0060 0.0041 0.0029 0.0003 0.0009 0.0003 0.0006
+p_IPapprox_proby_simp          0.6422 0.5912 0.0075 0.0075 0.0696 0.0241 0.0559 0.1613 0.5107 0.1820 0.4151 0.1665
+p_IPapprox_proby_simp_var      0.0041 0.0027 0.0011 0.0011 0.0035 0.0122 0.0037 0.0029 0.0025 0.0017 0.0013 0.0007
+p_IPapprox_tsm_simp            0.6772 0.6125 0.0128 0.0128 0.0727 0.0054 0.0163 0.1563 0.5643 0.2400 0.4026 0.2197
+p_IPapprox_tsm_simp_var        0.0014 0.0016 0.0022 0.0022 0.0044 0.0032 0.0027 0.0020 0.0018 0.0009 0.0010 0.0006
+p_IPapprox_carlogi_simp        0.6753 0.6128 0.0081 0.0081 0.0763 0.0044 0.0168 0.1437 0.5721 0.2419 0.4122 0.2272
+p_IPapprox_carlogi_simp_var    0.0015 0.0017 0.0021 0.0021 0.0040 0.0049 0.0029 0.0023 0.0018 0.0010 0.0010 0.0007
+p_IPapprox_losy_simp           0.6336 0.5877 0.0042 0.0042 0.0453 0.0356 0.0567 0.1546 0.5068 0.1505 0.4411 0.1395
+p_IPapprox_losy_simp_var       0.0045 0.0026 0.0015 0.0015 0.0045 0.0233 0.0012 0.0027 0.0022 0.0017 0.0009 0.0009
+p_IPapprox_simp_online         0.6763 0.6095 0.0129 0.0129 0.0833 0.0067 0.0201 0.1775 0.4867 0.2214 0.3396 0.1568
+p_IPapprox_simp_online_var     0.0023 0.0016 0.0011 0.0011 0.0081 0.0033 0.0043 0.0016 0.0025 0.0009 0.0015 0.0004
+p_IPapprox_simp_offline        0.6761 0.6094 0.0034 0.0034 0.0817 0.0042 0.0186 0.1752 0.4719 0.2310 0.3206 0.1571
+p_IPapprox_simp_offline_var    0.0022 0.0018 0.0021 0.0021 0.0034 0.0041 0.0039 0.0015 0.0024 0.0010 0.0021 0.0005
+p_IPapprox_simp_online_wo_norm 0.6763 0.6095 0.0129 0.0129 0.0833 0.0040 0.0206 0.1775 0.4867 0.2214 0.3396 0.1568
+p_IPapprox_simp_online_wo_norm_var 0.0023 0.0016 0.0011 0.0011 0.0081 0.0036 0.0036 0.0017 0.0025 0.0009 0.0015 0.0004
+end_print
+
+

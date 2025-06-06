@@ -1,0 +1,1371 @@
+activation conda
+activation env
+Running on device: CUDA
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/ResNet50/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='ResNet50', shadow_arch='ResNet18', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False)
+shadow_lists: [[0]]
+0-th shadow_list: [0]
+Loop 0, SEED 42
+cifar100_retrain_set_random_500
+Files already downloaded and verified
+Files already downloaded and verified
+dataname: cifar100, train_set: 50000, held_out: 10000
+len of train_set:  50000
+init_train_set: 30000
+cifar100 shadow_origin training
+model_path: LIRA_checkpoints/weights_resnet18_cifar100arch_ResNet50.pth
+Train set accuracy: 99.9%
+Test set accuracy: 69.5%
+model_path: LIRA_checkpoints/unle_models/retrain_weights_resnet18_cifar100_cifar100_retrain_set_random_500_seed_42arch_ResNet50.pth
+ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer1): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer2): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (3): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer3): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(512, 1024, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (3): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (4): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (5): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer4): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(1024, 2048, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (linear): Linear(in_features=2048, out_features=100, bias=True)
+)
+*********************
+Retain set accuracy: 100.0%
+Forget set accuracy: 70.0%
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+
+start_print
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/ResNet50/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='ResNet50', shadow_arch='ResNet18', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False, SHADOW_IDXs=[0], SUFFIX='cifar100_retrain_set_random_500')
+dict_keys(['p_Unleak', 'p_LiRA', 'p_LiRA_Online', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_RMIA_online', 'p_IPapprox_proby', 'p_IPapprox_proby_simp', 'p_IPapprox_tsm', 'p_IPapprox_tsm_simp', 'p_IPapprox_carlogi', 'p_IPapprox_carlogi_simp', 'p_IPapprox_losy', 'p_IPapprox_losy_simp', 'p_IPapprox_simp_online', 'p_IPapprox_simp_offline', 'p_IPapprox_simp_online_wo_norm'])
+Metric values                  auc    acc    tpr0.0 .-5    .-2    tnr0.0 .-5    .-2    1-mean 1-std  0-mean 0-std  cm-std1 cm-std0
+p_Unleak                       0.8357 0.7968 0.0000 0.0000 0.0914 0.0000 0.0032 0.5710 0.6995 0.3677 0.2282 0.1394
+p_LiRA                         0.7867 0.7402 0.0247 0.0247 0.1119 0.0000 0.00e+00 3.28e-02 -8.41e+60 1.34e+61 -3.07e+61 2.79e+61
+p_LiRA_Online                  0.8679 0.7770 0.0274 0.0274 0.1241 0.1060 1.06e-01 4.42e-01 1.50e+61 3.41e+61 -2.77e+61 2.77e+61
+p_update_LiRA                  0.6454 0.6432 0.0000 0.0000 0.0186 0.0000 0.0001 0.1431 0.2940 0.4853 -0.0045 0.2180
+p_EMIA                         0.8138 0.7544 0.0065 0.0065 0.1062 0.0000 0.0254 0.1702 0.1429 0.1935 0.0294 0.0968
+p_EMIA_p                       0.8004 0.7694 0.0003 0.0003 0.0108 0.1540 0.1688 0.5100 0.5547 0.2735 0.2683 0.1328
+p_RMIA                         0.8605 0.7607 0.0654 0.0654 0.1920 0.0440 0.0947 0.4400 0.7644 0.1556 0.4734 0.2384
+p_RMIA_online                  0.8851 0.7925 0.1300 0.1300 0.2436 0.0300 0.0973 0.5380 0.7754 0.1155 0.5798 0.1360
+p_IPapprox_proby               0.8378 0.8047 0.0006 0.0006 0.0466 0.0000 0.0891 0.5840 0.3899 0.3854 -0.0031 0.0453
+p_IPapprox_proby_simp          0.8586 0.7733 0.0033 0.0033 0.1889 0.0640 0.0640 0.5370 0.6388 0.2925 0.2423 0.2004
+p_IPapprox_tsm                 0.8287 0.7951 0.0018 0.0018 0.0257 0.1760 0.1760 0.5381 0.4362 0.3513 0.0051 0.2041
+p_IPapprox_tsm_simp            0.8735 0.8083 0.0355 0.0355 0.1338 0.0180 0.0180 0.4992 0.7049 0.2809 0.2691 0.2059
+p_IPapprox_carlogi             0.8225 0.7864 0.0019 0.0019 0.0173 0.0920 0.0920 0.4380 0.4413 0.3454 0.0296 0.2317
+p_IPapprox_carlogi_simp        0.8577 0.7988 0.0321 0.0321 0.1026 0.0600 0.0712 0.4273 0.7015 0.2864 0.2858 0.2170
+p_IPapprox_losy                0.8378 0.8043 0.0007 0.0007 0.0602 0.1420 0.1420 0.5855 0.2940 0.3439 -0.0019 0.0242
+p_IPapprox_losy_simp           0.8212 0.7471 0.0752 0.0752 0.1838 0.0000 0.0602 0.4880 0.6034 0.2549 0.3033 0.1949
+p_IPapprox_simp_online         0.8858 0.7988 0.0258 0.0258 0.2049 0.0240 0.0240 0.5688 0.6710 0.3160 0.2017 0.1560
+p_IPapprox_simp_offline        0.8825 0.7975 0.0548 0.0548 0.1741 0.0220 0.0226 0.5600 0.6404 0.3560 0.1367 0.1542
+p_IPapprox_simp_online_wo_norm 0.8858 0.7988 0.0258 0.0258 0.2049 0.0240 0.0240 0.5688 0.6710 0.3160 0.2017 0.1560
+end_print
+
+
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/ResNet50/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='ResNet50', shadow_arch='ResNet34', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False)
+shadow_lists: [[0]]
+0-th shadow_list: [0]
+Loop 0, SEED 42
+cifar100_retrain_set_random_500
+Files already downloaded and verified
+Files already downloaded and verified
+dataname: cifar100, train_set: 50000, held_out: 10000
+len of train_set:  50000
+init_train_set: 30000
+cifar100 shadow_origin training
+model_path: LIRA_checkpoints/weights_resnet18_cifar100arch_ResNet50.pth
+Train set accuracy: 99.9%
+Test set accuracy: 69.5%
+model_path: LIRA_checkpoints/unle_models/retrain_weights_resnet18_cifar100_cifar100_retrain_set_random_500_seed_42arch_ResNet50.pth
+ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer1): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer2): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (3): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer3): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(512, 1024, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (3): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (4): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (5): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer4): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(1024, 2048, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (linear): Linear(in_features=2048, out_features=100, bias=True)
+)
+*********************
+Retain set accuracy: 100.0%
+Forget set accuracy: 70.0%
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+
+start_print
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/ResNet50/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='ResNet50', shadow_arch='ResNet34', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False, SHADOW_IDXs=[0], SUFFIX='cifar100_retrain_set_random_500')
+dict_keys(['p_Unleak', 'p_LiRA', 'p_LiRA_Online', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_RMIA_online', 'p_IPapprox_proby', 'p_IPapprox_proby_simp', 'p_IPapprox_tsm', 'p_IPapprox_tsm_simp', 'p_IPapprox_carlogi', 'p_IPapprox_carlogi_simp', 'p_IPapprox_losy', 'p_IPapprox_losy_simp', 'p_IPapprox_simp_online', 'p_IPapprox_simp_offline', 'p_IPapprox_simp_online_wo_norm'])
+Metric values                  auc    acc    tpr0.0 .-5    .-2    tnr0.0 .-5    .-2    1-mean 1-std  0-mean 0-std  cm-std1 cm-std0
+p_Unleak                       0.8357 0.7968 0.0000 0.0000 0.0914 0.0000 0.0032 0.5710 0.6995 0.3677 0.2282 0.1394
+p_LiRA                         0.7771 0.7215 0.0230 0.0230 0.1492 0.0000 0.00e+00 3.30e-02 -8.73e+60 1.34e+61 -3.21e+61 3.02e+61
+p_LiRA_Online                  0.8604 0.7670 0.0528 0.0528 0.1509 0.1140 1.14e-01 4.29e-01 1.47e+61 3.37e+61 -2.91e+61 3.00e+61
+p_update_LiRA                  0.6249 0.6219 0.0000 0.0000 0.0185 0.0000 0.0001 0.1104 0.2520 0.4696 -0.0054 0.2321
+p_EMIA                         0.8070 0.7409 0.0032 0.0032 0.1605 0.0820 0.0820 0.1618 0.1543 0.1924 0.0374 0.1094
+p_EMIA_p                       0.8004 0.7694 0.0003 0.0003 0.0108 0.1540 0.1688 0.5100 0.5547 0.2735 0.2683 0.1328
+p_RMIA                         0.8612 0.7655 0.0726 0.0726 0.1674 0.1240 0.1511 0.4500 0.7634 0.1520 0.4782 0.2333
+p_RMIA_online                  0.8862 0.7891 0.0564 0.0564 0.2495 0.1280 0.1610 0.5260 0.7747 0.1146 0.5815 0.1322
+p_IPapprox_proby               0.8372 0.8036 0.0005 0.0005 0.0472 0.1460 0.1460 0.5828 0.3903 0.3862 -0.0033 0.0467
+p_IPapprox_proby_simp          0.8609 0.7742 0.0015 0.0015 0.2465 0.0600 0.0600 0.5360 0.6412 0.2871 0.2440 0.2023
+p_IPapprox_tsm                 0.8280 0.7945 0.0017 0.0017 0.0214 0.2400 0.2518 0.5405 0.4366 0.3538 0.0052 0.2041
+p_IPapprox_tsm_simp            0.8740 0.8003 0.0375 0.0375 0.1982 0.0060 0.0060 0.4984 0.7043 0.2800 0.2691 0.2068
+p_IPapprox_carlogi             0.8215 0.7892 0.0039 0.0039 0.0155 0.0960 0.0960 0.4320 0.4358 0.3443 0.0288 0.2301
+p_IPapprox_carlogi_simp        0.8566 0.7958 0.0708 0.0708 0.1112 0.0000 0.0183 0.4328 0.6979 0.2826 0.2889 0.2185
+p_IPapprox_losy                0.8371 0.8020 0.0006 0.0006 0.0625 0.1340 0.1340 0.5795 0.2845 0.3367 -0.0018 0.0242
+p_IPapprox_losy_simp           0.8174 0.7437 0.0009 0.0009 0.1226 0.2260 0.2260 0.4796 0.5942 0.2519 0.3056 0.1958
+p_IPapprox_simp_online         0.8894 0.8040 0.0187 0.0187 0.1585 0.0200 0.0200 0.5764 0.6742 0.3097 0.2059 0.1587
+p_IPapprox_simp_offline        0.8853 0.8005 0.1015 0.1015 0.2132 0.0100 0.0100 0.5545 0.6449 0.3498 0.1426 0.1574
+p_IPapprox_simp_online_wo_norm 0.8894 0.8040 0.0187 0.0187 0.1585 0.0200 0.0200 0.5764 0.6742 0.3097 0.2059 0.1587
+end_print
+
+
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/ResNet50/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='ResNet50', shadow_arch='ResNet50', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False)
+shadow_lists: [[0]]
+0-th shadow_list: [0]
+Loop 0, SEED 42
+cifar100_retrain_set_random_500
+Files already downloaded and verified
+Files already downloaded and verified
+dataname: cifar100, train_set: 50000, held_out: 10000
+len of train_set:  50000
+init_train_set: 30000
+cifar100 shadow_origin training
+model_path: LIRA_checkpoints/weights_resnet18_cifar100arch_ResNet50.pth
+Train set accuracy: 99.9%
+Test set accuracy: 69.5%
+model_path: LIRA_checkpoints/unle_models/retrain_weights_resnet18_cifar100_cifar100_retrain_set_random_500_seed_42arch_ResNet50.pth
+ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer1): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer2): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (3): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer3): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(512, 1024, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (3): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (4): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (5): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer4): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(1024, 2048, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (linear): Linear(in_features=2048, out_features=100, bias=True)
+)
+*********************
+Retain set accuracy: 100.0%
+Forget set accuracy: 70.0%
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+
+start_print
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/ResNet50/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='ResNet50', shadow_arch='ResNet50', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False, SHADOW_IDXs=[0], SUFFIX='cifar100_retrain_set_random_500')
+dict_keys(['p_Unleak', 'p_LiRA', 'p_LiRA_Online', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_RMIA_online', 'p_IPapprox_proby', 'p_IPapprox_proby_simp', 'p_IPapprox_tsm', 'p_IPapprox_tsm_simp', 'p_IPapprox_carlogi', 'p_IPapprox_carlogi_simp', 'p_IPapprox_losy', 'p_IPapprox_losy_simp', 'p_IPapprox_simp_online', 'p_IPapprox_simp_offline', 'p_IPapprox_simp_online_wo_norm'])
+Metric values                  auc    acc    tpr0.0 .-5    .-2    tnr0.0 .-5    .-2    1-mean 1-std  0-mean 0-std  cm-std1 cm-std0
+p_Unleak                       0.8357 0.7968 0.0000 0.0000 0.0914 0.0000 0.0032 0.5710 0.6995 0.3677 0.2282 0.1394
+p_LiRA                         0.7512 0.7106 0.0116 0.0116 0.1567 0.0000 0.00e+00 2.51e-02 -9.65e+60 1.45e+61 -3.26e+61 3.20e+61
+p_LiRA_Online                  0.8525 0.7665 0.0866 0.0866 0.1671 0.0000 3.01e-02 4.08e-01 1.38e+61 3.39e+61 -2.96e+61 3.18e+61
+p_update_LiRA                  0.6074 0.6063 0.0000 0.0000 0.0141 0.0000 0.0001 0.0822 0.2200 0.4643 -0.0016 0.2458
+p_EMIA                         0.7859 0.7279 0.0353 0.0353 0.1445 0.0760 0.0760 0.2077 0.2009 0.2152 0.0663 0.1496
+p_EMIA_p                       0.8004 0.7694 0.0003 0.0003 0.0108 0.1540 0.1688 0.5100 0.5547 0.2735 0.2683 0.1328
+p_RMIA                         0.8501 0.7519 0.0249 0.0250 0.1593 0.0100 0.0690 0.4200 0.7529 0.1646 0.4697 0.2371
+p_RMIA_online                  0.8794 0.7911 0.0405 0.0405 0.1741 0.2160 0.2284 0.5200 0.7699 0.1199 0.5764 0.1353
+p_IPapprox_proby               0.8383 0.8031 0.0004 0.0004 0.0483 0.2460 0.2460 0.5760 0.3850 0.3838 -0.0032 0.0456
+p_IPapprox_proby_simp          0.8479 0.7674 0.0016 0.0016 0.2109 0.0620 0.0632 0.5180 0.6339 0.2945 0.2491 0.2036
+p_IPapprox_tsm                 0.8290 0.7989 0.0016 0.0016 0.0203 0.1780 0.1780 0.5280 0.4392 0.3523 0.0058 0.2048
+p_IPapprox_tsm_simp            0.8686 0.8084 0.0361 0.0361 0.1732 0.0300 0.0300 0.4783 0.6992 0.2845 0.2683 0.2069
+p_IPapprox_carlogi             0.8208 0.7837 0.0033 0.0033 0.0141 0.0800 0.0800 0.4300 0.4271 0.3388 0.0271 0.2287
+p_IPapprox_carlogi_simp        0.8534 0.7965 0.0540 0.0540 0.0842 0.0000 0.0183 0.3663 0.6964 0.2750 0.3000 0.2233
+p_IPapprox_losy                0.8378 0.8013 0.0006 0.0006 0.0621 0.2200 0.2283 0.5829 0.2755 0.3288 -0.0018 0.0228
+p_IPapprox_losy_simp           0.7966 0.7348 0.0095 0.0095 0.1333 0.1020 0.1020 0.4560 0.5801 0.2561 0.3119 0.1953
+p_IPapprox_simp_online         0.8819 0.8031 0.0212 0.0212 0.1492 0.0340 0.0340 0.5471 0.6698 0.3078 0.2124 0.1621
+p_IPapprox_simp_offline        0.8771 0.8022 0.0581 0.0581 0.1483 0.0160 0.0160 0.5440 0.6416 0.3463 0.1494 0.1601
+p_IPapprox_simp_online_wo_norm 0.8819 0.8031 0.0212 0.0212 0.1492 0.0340 0.0340 0.5471 0.6698 0.3078 0.2124 0.1621
+end_print
+
+
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/ResNet50/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='ResNet50', shadow_arch='vgg16', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False)
+shadow_lists: [[0]]
+0-th shadow_list: [0]
+Loop 0, SEED 42
+cifar100_retrain_set_random_500
+Files already downloaded and verified
+Files already downloaded and verified
+dataname: cifar100, train_set: 50000, held_out: 10000
+len of train_set:  50000
+init_train_set: 30000
+cifar100 shadow_origin training
+model_path: LIRA_checkpoints/weights_resnet18_cifar100arch_ResNet50.pth
+Train set accuracy: 99.9%
+Test set accuracy: 69.5%
+model_path: LIRA_checkpoints/unle_models/retrain_weights_resnet18_cifar100_cifar100_retrain_set_random_500_seed_42arch_ResNet50.pth
+ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer1): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer2): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (3): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer3): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(512, 1024, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (3): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (4): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (5): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer4): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(1024, 2048, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (linear): Linear(in_features=2048, out_features=100, bias=True)
+)
+*********************
+Retain set accuracy: 100.0%
+Forget set accuracy: 70.0%
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+
+start_print
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/ResNet50/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='ResNet50', shadow_arch='vgg16', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False, SHADOW_IDXs=[0], SUFFIX='cifar100_retrain_set_random_500')
+dict_keys(['p_Unleak', 'p_LiRA', 'p_LiRA_Online', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_RMIA_online', 'p_IPapprox_proby', 'p_IPapprox_proby_simp', 'p_IPapprox_tsm', 'p_IPapprox_tsm_simp', 'p_IPapprox_carlogi', 'p_IPapprox_carlogi_simp', 'p_IPapprox_losy', 'p_IPapprox_losy_simp', 'p_IPapprox_simp_online', 'p_IPapprox_simp_offline', 'p_IPapprox_simp_online_wo_norm'])
+Metric values                  auc    acc    tpr0.0 .-5    .-2    tnr0.0 .-5    .-2    1-mean 1-std  0-mean 0-std  cm-std1 cm-std0
+p_Unleak                       0.8357 0.7968 0.0000 0.0000 0.0914 0.0000 0.0032 0.5710 0.6995 0.3677 0.2282 0.1394
+p_LiRA                         0.6053 0.5905 0.0077 0.0077 0.0508 0.0000 0.00e+00 1.07e-02 -5.09e+61 6.88e+61 -9.00e+61 1.13e+62
+p_LiRA_Online                  0.6969 0.6465 0.0090 0.0090 0.0546 0.0000 2.48e-02 2.46e-01 -2.75e+61 7.68e+61 -8.70e+61 1.13e+62
+p_update_LiRA                  0.5599 0.5562 0.0000 0.0000 0.0175 0.0000 0.0001 0.0538 0.1240 0.3696 0.0012 0.2240
+p_EMIA                         0.7520 0.7227 0.0415 0.0415 0.0972 0.1320 0.1320 0.4324 0.4352 0.1593 0.3634 0.2149
+p_EMIA_p                       0.8004 0.7694 0.0003 0.0003 0.0108 0.1540 0.1688 0.5100 0.5547 0.2735 0.2683 0.1328
+p_RMIA                         0.8337 0.7488 0.0149 0.0149 0.1313 0.1160 0.1549 0.4480 0.7372 0.1719 0.4869 0.2139
+p_RMIA_online                  0.8709 0.7776 0.0305 0.0305 0.1326 0.1860 0.2303 0.5240 0.7630 0.1232 0.5816 0.1185
+p_IPapprox_proby               0.8366 0.7966 0.0006 0.0006 0.0495 0.1480 0.1751 0.5687 0.3688 0.3759 -0.0033 0.0451
+p_IPapprox_proby_simp          0.8284 0.7557 0.0019 0.0019 0.1403 0.0700 0.0700 0.5105 0.6100 0.3118 0.2463 0.2154
+p_IPapprox_tsm                 0.8272 0.7943 0.0014 0.0014 0.0171 0.2100 0.2100 0.5172 0.4439 0.3582 0.0084 0.2069
+p_IPapprox_tsm_simp            0.8627 0.7946 0.0376 0.0376 0.1822 0.0000 0.0159 0.5080 0.6857 0.3037 0.2480 0.1994
+p_IPapprox_carlogi             0.8153 0.7753 0.0085 0.0085 0.0167 0.0760 0.0760 0.3909 0.3130 0.2660 0.0118 0.1734
+p_IPapprox_carlogi_simp        0.8128 0.7582 0.0307 0.0307 0.1416 0.0000 0.0000 0.0932 0.6656 0.2155 0.3671 0.2448
+p_IPapprox_losy                0.8357 0.7998 0.0007 0.0007 0.0641 0.1700 0.1700 0.5689 0.1706 0.2287 -0.0009 0.0120
+p_IPapprox_losy_simp           0.7150 0.6857 0.0069 0.0069 0.0703 0.0000 0.0490 0.3764 0.4773 0.2401 0.3148 0.2002
+p_IPapprox_simp_online         0.8675 0.7881 0.0220 0.0220 0.1583 0.0280 0.0339 0.5133 0.6557 0.2958 0.2337 0.1784
+p_IPapprox_simp_offline        0.8629 0.7933 0.0147 0.0147 0.1092 0.0220 0.0220 0.4793 0.6318 0.3272 0.1815 0.1764
+p_IPapprox_simp_online_wo_norm 0.8675 0.7881 0.0220 0.0220 0.1583 0.0280 0.0339 0.5133 0.6557 0.2958 0.2337 0.1784
+end_print
+
+
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/ResNet50/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='ResNet50', shadow_arch='vgg11', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False)
+shadow_lists: [[0]]
+0-th shadow_list: [0]
+Loop 0, SEED 42
+cifar100_retrain_set_random_500
+Files already downloaded and verified
+Files already downloaded and verified
+dataname: cifar100, train_set: 50000, held_out: 10000
+len of train_set:  50000
+init_train_set: 30000
+cifar100 shadow_origin training
+model_path: LIRA_checkpoints/weights_resnet18_cifar100arch_ResNet50.pth
+Train set accuracy: 99.9%
+Test set accuracy: 69.5%
+model_path: LIRA_checkpoints/unle_models/retrain_weights_resnet18_cifar100_cifar100_retrain_set_random_500_seed_42arch_ResNet50.pth
+ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer1): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer2): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (3): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer3): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(512, 1024, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (3): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (4): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (5): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer4): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(1024, 2048, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (linear): Linear(in_features=2048, out_features=100, bias=True)
+)
+*********************
+Retain set accuracy: 100.0%
+Forget set accuracy: 70.0%
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+
+start_print
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/ResNet50/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='ResNet50', shadow_arch='vgg11', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False, SHADOW_IDXs=[0], SUFFIX='cifar100_retrain_set_random_500')
+dict_keys(['p_Unleak', 'p_LiRA', 'p_LiRA_Online', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_RMIA_online', 'p_IPapprox_proby', 'p_IPapprox_proby_simp', 'p_IPapprox_tsm', 'p_IPapprox_tsm_simp', 'p_IPapprox_carlogi', 'p_IPapprox_carlogi_simp', 'p_IPapprox_losy', 'p_IPapprox_losy_simp', 'p_IPapprox_simp_online', 'p_IPapprox_simp_offline', 'p_IPapprox_simp_online_wo_norm'])
+Metric values                  auc    acc    tpr0.0 .-5    .-2    tnr0.0 .-5    .-2    1-mean 1-std  0-mean 0-std  cm-std1 cm-std0
+p_Unleak                       0.8357 0.7968 0.0000 0.0000 0.0914 0.0000 0.0032 0.5710 0.6995 0.3677 0.2282 0.1394
+p_LiRA                         0.6388 0.6183 0.0025 0.0025 0.0379 0.0000 0.00e+00 1.18e-02 -4.33e+61 6.62e+61 -8.26e+61 1.01e+62
+p_LiRA_Online                  0.7321 0.6683 0.0025 0.0025 0.0442 0.0000 2.42e-02 2.77e-01 -1.99e+61 7.38e+61 -7.95e+61 1.01e+62
+p_update_LiRA                  0.5742 0.5712 0.0000 0.0000 0.0169 0.0000 0.0001 0.0701 0.1520 0.3961 0.0000 0.2177
+p_EMIA                         0.7657 0.7265 0.0133 0.0133 0.0789 0.1300 0.1300 0.4276 0.4240 0.1685 0.3188 0.2309
+p_EMIA_p                       0.8004 0.7694 0.0003 0.0003 0.0108 0.1540 0.1688 0.5100 0.5547 0.2735 0.2683 0.1328
+p_RMIA                         0.8367 0.7519 0.0081 0.0081 0.0724 0.1660 0.1872 0.4180 0.7371 0.1783 0.4740 0.2176
+p_RMIA_online                  0.8699 0.7784 0.0482 0.0482 0.1416 0.0760 0.1385 0.5100 0.7627 0.1266 0.5732 0.1251
+p_IPapprox_proby               0.8367 0.7977 0.0004 0.0004 0.0475 0.1540 0.1811 0.5770 0.3718 0.3776 -0.0030 0.0440
+p_IPapprox_proby_simp          0.8309 0.7554 0.0023 0.0023 0.1237 0.0600 0.0600 0.5044 0.6065 0.3158 0.2336 0.2127
+p_IPapprox_tsm                 0.8290 0.7932 0.0012 0.0012 0.0197 0.0000 0.0690 0.5240 0.4384 0.3532 0.0068 0.2047
+p_IPapprox_tsm_simp            0.8629 0.8030 0.0382 0.0382 0.1848 0.0180 0.0180 0.4740 0.6915 0.2958 0.2590 0.2062
+p_IPapprox_carlogi             0.8167 0.7747 0.0081 0.0081 0.0127 0.0680 0.0680 0.4040 0.3261 0.2740 0.0136 0.1784
+p_IPapprox_carlogi_simp        0.8159 0.7537 0.0430 0.0430 0.1472 0.0000 0.0000 0.0612 0.6582 0.2251 0.3521 0.2414
+p_IPapprox_losy                0.8353 0.7996 0.0008 0.0008 0.0642 0.1600 0.1600 0.5688 0.1787 0.2377 -0.0009 0.0124
+p_IPapprox_losy_simp           0.7151 0.6764 0.0190 0.0190 0.0415 0.1120 0.1256 0.3533 0.4815 0.2363 0.3072 0.1989
+p_IPapprox_simp_online         0.8683 0.7893 0.0211 0.0211 0.1270 0.0260 0.0260 0.5320 0.6513 0.3025 0.2218 0.1745
+p_IPapprox_simp_offline        0.8623 0.7957 0.0194 0.0194 0.0771 0.0200 0.0200 0.4880 0.6282 0.3349 0.1689 0.1717
+p_IPapprox_simp_online_wo_norm 0.8683 0.7893 0.0211 0.0211 0.1270 0.0260 0.0260 0.5320 0.6513 0.3025 0.2218 0.1745
+end_print
+
+
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/ResNet50/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='ResNet50', shadow_arch='DenseNet', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False)
+shadow_lists: [[0]]
+0-th shadow_list: [0]
+Loop 0, SEED 42
+cifar100_retrain_set_random_500
+Files already downloaded and verified
+Files already downloaded and verified
+dataname: cifar100, train_set: 50000, held_out: 10000
+len of train_set:  50000
+init_train_set: 30000
+cifar100 shadow_origin training
+model_path: LIRA_checkpoints/weights_resnet18_cifar100arch_ResNet50.pth
+Train set accuracy: 99.9%
+Test set accuracy: 69.5%
+model_path: LIRA_checkpoints/unle_models/retrain_weights_resnet18_cifar100_cifar100_retrain_set_random_500_seed_42arch_ResNet50.pth
+ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer1): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer2): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (3): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer3): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(512, 1024, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (3): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (4): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (5): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer4): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(1024, 2048, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (linear): Linear(in_features=2048, out_features=100, bias=True)
+)
+*********************
+Retain set accuracy: 100.0%
+Forget set accuracy: 70.0%
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+
+start_print
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/ResNet50/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='ResNet50', shadow_arch='DenseNet', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False, SHADOW_IDXs=[0], SUFFIX='cifar100_retrain_set_random_500')
+dict_keys(['p_Unleak', 'p_LiRA', 'p_LiRA_Online', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_RMIA_online', 'p_IPapprox_proby', 'p_IPapprox_proby_simp', 'p_IPapprox_tsm', 'p_IPapprox_tsm_simp', 'p_IPapprox_carlogi', 'p_IPapprox_carlogi_simp', 'p_IPapprox_losy', 'p_IPapprox_losy_simp', 'p_IPapprox_simp_online', 'p_IPapprox_simp_offline', 'p_IPapprox_simp_online_wo_norm'])
+Metric values                  auc    acc    tpr0.0 .-5    .-2    tnr0.0 .-5    .-2    1-mean 1-std  0-mean 0-std  cm-std1 cm-std0
+p_Unleak                       0.8357 0.7968 0.0000 0.0000 0.0914 0.0000 0.0032 0.5710 0.6995 0.3677 0.2282 0.1394
+p_LiRA                         0.7701 0.7307 0.0214 0.0214 0.0719 0.0000 0.00e+00 3.00e-02 -1.49e+61 2.16e+61 -4.22e+61 3.45e+61
+p_LiRA_Online                  0.8405 0.7675 0.0164 0.0164 0.0788 0.1120 1.12e-01 4.23e-01 8.54e+60 4.06e+61 -3.92e+61 3.42e+61
+p_update_LiRA                  0.5825 0.5801 0.0000 0.0000 0.0178 0.0000 0.0001 0.1454 0.1620 0.3947 -0.0059 0.1719
+p_EMIA                         0.7883 0.7326 0.0063 0.0063 0.0568 0.0000 0.0086 0.1098 0.0972 0.1656 0.0162 0.0662
+p_EMIA_p                       0.8004 0.7694 0.0003 0.0003 0.0108 0.1540 0.1688 0.5100 0.5547 0.2735 0.2683 0.1328
+p_RMIA                         0.8283 0.7450 0.0495 0.0495 0.1288 0.1360 0.1555 0.4020 0.7322 0.1892 0.4698 0.2114
+p_RMIA_online                  0.8632 0.7776 0.0558 0.0558 0.1350 0.0160 0.0862 0.5069 0.7646 0.1253 0.5819 0.1224
+p_IPapprox_proby               0.8384 0.8013 0.0005 0.0005 0.0392 0.1640 0.1640 0.5840 0.3910 0.3915 -0.0023 0.0415
+p_IPapprox_proby_simp          0.8339 0.7474 0.0020 0.0020 0.1036 0.0460 0.0460 0.4991 0.5815 0.3285 0.1948 0.1952
+p_IPapprox_tsm                 0.8314 0.7974 0.0012 0.0012 0.0167 0.1920 0.1920 0.5365 0.4446 0.3532 0.0102 0.1918
+p_IPapprox_tsm_simp            0.8585 0.8002 0.0462 0.0462 0.1289 0.0040 0.0040 0.4940 0.6637 0.3063 0.2309 0.1926
+p_IPapprox_carlogi             0.8258 0.7895 0.0031 0.0031 0.0152 0.0000 0.0266 0.4483 0.4388 0.3383 0.0322 0.2146
+p_IPapprox_carlogi_simp        0.8466 0.7949 0.0534 0.0534 0.0862 0.0260 0.0260 0.4114 0.6577 0.2981 0.2531 0.2035
+p_IPapprox_losy                0.8385 0.8012 0.0006 0.0006 0.0591 0.1660 0.1660 0.5816 0.2738 0.3317 -0.0014 0.0205
+p_IPapprox_losy_simp           0.7749 0.7089 0.0001 0.0001 0.0769 0.1980 0.1980 0.4237 0.5262 0.2841 0.2572 0.2006
+p_IPapprox_simp_online         0.8699 0.7994 0.0187 0.0187 0.1129 0.0160 0.0160 0.5660 0.6308 0.3336 0.1713 0.1463
+p_IPapprox_simp_offline        0.8629 0.7988 0.0231 0.0231 0.0861 0.0140 0.0140 0.5354 0.6025 0.3700 0.1120 0.1456
+p_IPapprox_simp_online_wo_norm 0.8699 0.7994 0.0187 0.0187 0.1129 0.0160 0.0160 0.5660 0.6308 0.3336 0.1713 0.1463
+end_print
+
+

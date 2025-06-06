@@ -1,0 +1,12 @@
+sbatch run_multia100_traps_ip_shift_50.slurm
+sbatch run_multia100_traps_ip_shift_100.slurm
+sbatch run_multia100_traps_ip_shift_150.slurm
+# sbatch run_multia100_traps_ip_shift_200.slurm
+# sbatch run_multia100_traps_ip_shift_250.slurm
+# sbatch run_multia100_traps_ip_shift_300.slurm
+# sbatch run_multia100_traps_ip_shift_650.slurm
+
+# sbatch run_multia100_traps_ip_shift_700.slurm
+# sbatch run_multia100_traps_ip_shift_750.slurm
+# sbatch run_multia100_traps_ip_shift_800.slurm
+# sbatch run_multia100_traps_ip_shift_850.slurm

@@ -1,0 +1,56 @@
+2025-04-20 14:04:17,728 - root - INFO - Args: Namespace(config='exp_configs/config_template_traps_ip.yaml', attacks=None, run_all=True, seed=None, output='/ibex/user/wangc0g/projs/Evaluate-Unlearning/mia_llms_benchmark/exp_output/output_traps_ip_38306669.pkl', log_folder='logs', slurm_name='bash', slurm_id='00000000', local_rank=0)
+2025-04-20 14:04:17,730 - root - INFO - Log_file_path: logs/bash-00000000-logging.log
+2025-04-20 14:04:17,738 - root - INFO - Config: {'global': {'target_model': 'muse-bench/MUSE-news_retrain', 'datasets': [{'muse_name': 'muse-bench/MUSE-News'}], 'batch_size': 8, 'device': 'cuda', 'fpr_thresholds': [0.1, 0.01], 'n_bootstrap_samples': 1000, 'ref_model': 'croissantllm/base_190k', 'fitRef_model': 'muse-bench/MUSE-news_target'}, 'bag_of_words': {'module': 'bag_of_words', 'test_size': 0.2, 'min_df': 0.05, 'n_estimators': 100, 'max_depth': 2, 'min_samples_leaf': 5, 'seed': 42, 'device': 'cuda', 'batch_size': 64}, 'ratio': {'module': 'ratio', 'ref_model': True, 'batch_size': 64, 'device': 'cuda'}, 'ratio_online': {'module': 'ratio_online', 'ref_model': True, 'batch_size': 32, 'fitRef_model': True, 'fit_datasets': [{'mimir_name': 'arxiv', 'split': 'ngram_13_0.8'}], 'device': 'cuda', 'metric': 'avg_token_loss'}, 'rmia_online': {'module': 'rmia_online', 'ref_model': True, 'batch_size': 32, 'fitRef_model': True, 'fit_datasets': [{'mimir_name': 'arxiv', 'split': 'ngram_13_0.8'}], 'populations': True, 'device': 'cuda', 'metric': 'avg_token_loss'}, 'ip_fit': {'module': 'ip', 'ref_model': True, 'fitRef_model': True, 'fit_datasets': [{'mimir_name': 'arxiv', 'split': 'ngram_13_0.8'}], 'batch_size': 64, 'device': 'cuda', 'metric': 'avg_token_loss'}, 'loss': {'module': 'loss', 'device': 'cuda', 'batch_size': 64}, 'zlib': {'module': 'zlib', 'device': 'cuda', 'batch_size': 64}, 'lowercase': {'module': 'lowercase', 'batch_size': 8, 'device': 'cuda'}, 'neighborhood': {'module': 'neighborhood', 'batch_size': 128, 'mlm_model': 'roberta-base', 'n_neighbors': 50, 'top_k': 10, 'is_scale_embeds': True, 'device': 'cuda'}, 'pac_10': {'module': 'pac', 'k_min': 0.3, 'k_max': 0.05, 'alpha': 0.3, 'num_augmentations': 10, 'device': 'cuda', 'batch_size': 8}, 'surp_40_2': {'module': 'surp', 'k': 40, 'max_entropy': 2.0, 'batch_size': 8, 'device': 'cuda'}, 'minkprob': {'module': 'minkprob', 'k': 20, 'batch_size': 8, 'device': 'cuda'}, 'minkplusplus': {'module': 'minkplusplus', 'k': 20, 'batch_size': 8, 'device': 'cuda'}, 'recall': {'module': 'recall', 'extra_non_member_dataset': 'imperial-cpg/copyright-traps-extra-non-members', 'split': 'seq_len_100', 'batch_size': 8, 'n_shots': 10, 'match_perplexity': False, 'fixed_prefix': True, 'device': 'cuda'}}
+2025-04-20 14:04:41,123 - root - INFO - Loading dataset {'muse_name': 'muse-bench/MUSE-News'}
+2025-04-20 14:43:21,495 - root - INFO - Saved processed data to logs/bash-00000000-muse-bench/MUSE-News
+2025-04-20 14:51:10,457 - root - INFO - Saved ref_nlloss signals to logs/bash-00000000-muse-bench/MUSE-News-ref_nlloss.txt
+2025-04-20 15:29:36,955 - root - INFO - Saved fitRef_nlloss signals to logs/bash-00000000-muse-bench/MUSE-News-fitRef_nlloss.txt
+2025-04-20 15:29:37,212 - root - INFO - y_true: 0.6632 1s, 0.3368 0s
+2025-04-20 15:29:37,215 - root - INFO - Running attack zlib on dataset muse-bench_MUSE-News
+2025-04-20 15:30:12,828 - root - INFO - AUC zlib on muse-bench_MUSE-News:  0.8928 ± 0.0046
+2025-04-20 15:30:12,828 - root - INFO - Running attack surp_40_2 on dataset muse-bench_MUSE-News
+2025-04-20 16:08:48,647 - root - INFO - AUC surp_40_2 on muse-bench_MUSE-News:  0.8719 ± 0.0054
+2025-04-20 16:08:48,647 - root - INFO - Running attack rmia_online on dataset muse-bench_MUSE-News
+2025-04-20 16:10:26,213 - root - INFO - AUC rmia_online on muse-bench_MUSE-News:  0.9278 ± 0.0034
+2025-04-20 16:10:26,214 - root - INFO - Running attack recall on dataset muse-bench_MUSE-News
+2025-04-20 18:30:53,816 - root - INFO - AUC recall on muse-bench_MUSE-News:  0.8808 ± 0.0050
+2025-04-20 18:30:53,816 - root - INFO - Running attack ratio_online on dataset muse-bench_MUSE-News
+2025-04-20 18:30:56,379 - root - INFO - AUC ratio_online on muse-bench_MUSE-News:  0.9299 ± 0.0037
+2025-04-20 18:30:56,379 - root - INFO - Running attack ratio on dataset muse-bench_MUSE-News
+2025-04-20 18:31:27,002 - root - INFO - AUC ratio on muse-bench_MUSE-News:  0.9126 ± 0.0045
+2025-04-20 18:31:27,002 - root - INFO - Running attack pac_10 on dataset muse-bench_MUSE-News
+2025-04-21 00:03:30,907 - root - WARNING - NaN values in y_pred count = 19
+2025-04-21 00:03:32,194 - root - INFO - AUC pac_10 on muse-bench_MUSE-News:  0.8782 ± 0.0052
+2025-04-21 00:03:32,194 - root - INFO - Running attack neighborhood on dataset muse-bench_MUSE-News
+2025-04-22 06:09:02,262 - root - INFO - AUC neighborhood on muse-bench_MUSE-News:  0.7651 ± 0.0073
+2025-04-22 06:09:02,262 - root - INFO - Running attack minkprob on dataset muse-bench_MUSE-News
+2025-04-22 06:47:30,791 - root - WARNING - NaN values in y_pred count = 19
+2025-04-22 06:47:32,082 - root - INFO - AUC minkprob on muse-bench_MUSE-News:  0.8784 ± 0.0053
+2025-04-22 06:47:32,082 - root - INFO - Running attack minkplusplus on dataset muse-bench_MUSE-News
+2025-04-22 07:26:04,250 - root - WARNING - NaN values in y_pred count = 19
+2025-04-22 07:26:05,542 - root - INFO - AUC minkplusplus on muse-bench_MUSE-News:  0.8469 ± 0.0057
+2025-04-22 08:06:08,475 - root - INFO - Running attack loss on dataset muse-bench_MUSE-News
+2025-04-22 08:06:34,219 - root - INFO - AUC loss on muse-bench_MUSE-News:  0.8746 ± 0.0052
+2025-04-22 08:06:34,219 - root - INFO - Running attack ip_fit on dataset muse-bench_MUSE-News
+2025-04-22 08:06:38,247 - root - INFO - AUC ip_fit on muse-bench_MUSE-News:  0.9355 ± 0.0033
+2025-04-22 08:06:38,247 - root - INFO - Running attack bag_of_words on dataset muse-bench_MUSE-News
+2025-04-22 08:07:09,321 - root - INFO - AUC bag_of_words on muse-bench_MUSE-News:  0.5411 ± 0.0081
+2025-04-22 08:07:09,323 - root - INFO - Dataset: muse-bench_MUSE-News
+2025-04-22 08:07:09,323 - root - INFO - +--------------+-----------------+-----------------+-----------------+
+2025-04-22 08:07:09,324 - root - INFO - | MIA          | AUC             | TPR@FPR=0.1     | TPR@FPR=0.01    |
+2025-04-22 08:07:09,324 - root - INFO - +==============+=================+=================+=================+
+2025-04-22 08:07:09,324 - root - INFO - | zlib         | 0.8928 ± 0.0046 | 0.7834 ± 0.0093 | 0.2966 ± 0.0660 |
+2025-04-22 08:07:09,324 - root - INFO - | surp_40_2    | 0.8719 ± 0.0054 | 0.7734 ± 0.0090 | 0.3348 ± 0.0623 |
+2025-04-22 08:07:09,324 - root - INFO - | rmia_online  | 0.9278 ± 0.0034 | 0.8225 ± 0.0093 | 0.5662 ± 0.0230 |
+2025-04-22 08:07:09,324 - root - INFO - | recall       | 0.8808 ± 0.0050 | 0.7831 ± 0.0092 | 0.3516 ± 0.0528 |
+2025-04-22 08:07:09,324 - root - INFO - | ratio_online | 0.9299 ± 0.0037 | 0.8479 ± 0.0076 | 0.3661 ± 0.0717 |
+2025-04-22 08:07:09,324 - root - INFO - | ratio        | 0.9126 ± 0.0045 | 0.8434 ± 0.0079 | 0.4744 ± 0.0769 |
+2025-04-22 08:07:09,324 - root - INFO - | pac_10       | 0.8782 ± 0.0052 | 0.7766 ± 0.0087 | 0.2748 ± 0.0635 |
+2025-04-22 08:07:09,324 - root - INFO - | neighborhood | 0.7651 ± 0.0073 | 0.1404 ± 0.0106 | 0.0121 ± 0.0032 |
+2025-04-22 08:07:09,324 - root - INFO - | minkprob     | 0.8784 ± 0.0053 | 0.7868 ± 0.0090 | 0.4641 ± 0.1012 |
+2025-04-22 08:07:09,324 - root - INFO - | minkplusplus | 0.8469 ± 0.0057 | 0.7187 ± 0.0099 | 0.4464 ± 0.0530 |
+2025-04-22 08:07:09,324 - root - INFO - | loss         | 0.8746 ± 0.0052 | 0.7749 ± 0.0089 | 0.4195 ± 0.0454 |
+2025-04-22 08:07:09,324 - root - INFO - | ip_fit       | 0.9355 ± 0.0033 | 0.8549 ± 0.0080 | 0.5785 ± 0.0434 |
+2025-04-22 08:07:09,324 - root - INFO - | bag_of_words | 0.5411 ± 0.0081 | 0.1298 ± 0.0105 | 0.0097 ± 0.0028 |
+2025-04-22 08:07:09,324 - root - INFO - +--------------+-----------------+-----------------+-----------------+
+2025-04-22 08:07:09,324 - root - INFO -  

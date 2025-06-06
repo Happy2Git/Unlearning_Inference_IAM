@@ -1,0 +1,140 @@
+# Global configuration
+# croissantllm 1.3B, v100x1, 2min | a100x1, 80s
+global:
+  # target_model: "muse-bench/MUSE-books_retrain"
+  target_model: "muse-bench/MUSE-news_retrain"
+  # target_model: "./finetune/llama2-7b-muse-bench-news-unlearn-final"
+  datasets:
+    # - muse_name: "muse-bench/MUSE-Books"
+    - muse_name: "muse-bench/MUSE-News"
+  batch_size: 8
+  device: "cuda"
+  fpr_thresholds:
+    - 0.1
+    - 0.01
+  n_bootstrap_samples: 1000
+  ref_model: "croissantllm/base_190k"
+  fitRef_model: "muse-bench/MUSE-news_target"
+  # fitRef_model: "./finetune/llama2-7b-muse-bench-news-original-final"
+  # fitRef_model: "EleutherAI/pythia-1b"
+
+bag_of_words:
+  module: bag_of_words
+  test_size: 0.2
+  min_df: 0.05
+  n_estimators: 100
+  max_depth: 2
+  min_samples_leaf: 5
+  seed: 42
+  device: "cuda"
+  batch_size: 64
+
+ratio:
+  module: ratio
+  ref_model: true
+  batch_size: 64
+  device: "cuda"
+
+ratio_online:
+  module: lira_online
+  ref_model: true
+  batch_size: 64
+  ref_model: true
+  fitRef_model: true
+  fit_datasets:
+    - mimir_name: "arxiv"
+      split: "ngram_13_0.8"
+  batch_size: 32
+  device: "cuda"
+  metric: "avg_token_loss"
+
+rmia_online:
+  module: rmia_online
+  ref_model: true
+  batch_size: 64
+  ref_model: true
+  fitRef_model: true
+  fit_datasets:
+    - mimir_name: "arxiv"
+      split: "ngram_13_0.8"
+  device: "cuda"
+  metric: "avg_token_loss"
+
+ip_fit:
+  module: iam_llm_score
+  ref_model: true
+  fitRef_model: true
+  fit_datasets:
+    - mimir_name: "arxiv"
+      split: "ngram_13_0.8"
+  batch_size: 64
+  device: "cuda"
+  metric: "avg_token_loss"
+
+loss:
+  module: loss
+  device: "cuda"
+  batch_size: 64
+
+zlib:
+  module: zlib
+  device: "cuda"
+  batch_size: 64
+
+lowercase:
+  module: lowercase
+  batch_size: 8
+  device: "cuda"
+
+ratio:
+  module: ratio
+  ref_model: true
+  batch_size: 64
+  device: "cuda"
+
+neighborhood:
+  module: neighborhood
+  batch_size: 128
+  mlm_model: 'roberta-base'
+  n_neighbors: 50
+  top_k: 10
+  is_scale_embeds: true
+  device: 'cuda'
+
+pac_10:
+  module: pac
+  k_min: 0.3
+  k_max: 0.05
+  alpha: 0.3
+  num_augmentations: 10
+  device: "cuda"
+  batch_size: 8
+
+surp_40_2:
+  module: surp
+  k: 40
+  max_entropy: 2.0
+  batch_size: 8
+  device: "cuda"
+
+minkprob:
+  module: minkprob
+  k: 20
+  batch_size: 8
+  device: "cuda"
+
+minkplusplus:
+  module: minkplusplus
+  k: 20
+  batch_size: 8
+  device: "cuda"
+
+recall:
+  module: recall
+  extra_non_member_dataset: "imperial-cpg/copyright-traps-extra-non-members"
+  split: "seq_len_100"
+  batch_size: 8
+  n_shots: 10
+  match_perplexity: false
+  fixed_prefix: true
+  device: "cuda"

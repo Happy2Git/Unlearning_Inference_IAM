@@ -1,0 +1,9 @@
+sbatch new_records.slurm 
+python new_records_refnums_slurm_gen.py
+
+sbatch new_records_shift.slurm 
+python new_records_methods_gen.py
+python new_records_methods_class_gen.py
+python new_records_internal_slurm_gen.py
+sbatch new_records_internal_shift.slurm
+python new_records_shift_model_gen.py

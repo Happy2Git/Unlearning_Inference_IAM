@@ -1,0 +1,567 @@
+activation conda
+activation env
+Running on device: CUDA
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/vgg11/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='vgg11', shadow_arch='ResNet18', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False)
+shadow_lists: [[0]]
+0-th shadow_list: [0]
+Loop 0, SEED 42
+cifar100_retrain_set_random_500
+Files already downloaded and verified
+Files already downloaded and verified
+dataname: cifar100, train_set: 50000, held_out: 10000
+len of train_set:  50000
+init_train_set: 30000
+cifar100 shadow_origin training
+model_path: LIRA_checkpoints/weights_resnet18_cifar100arch_vgg11.pth
+Train set accuracy: 100.0%
+Test set accuracy: 57.4%
+model_path: LIRA_checkpoints/unle_models/retrain_weights_resnet18_cifar100_cifar100_retrain_set_random_500_seed_42arch_vgg11.pth
+VGG(
+  (features): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): ReLU(inplace=True)
+    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (7): ReLU(inplace=True)
+    (8): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (9): ReLU(inplace=True)
+    (10): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (11): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (12): ReLU(inplace=True)
+    (13): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (14): ReLU(inplace=True)
+    (15): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (16): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (19): ReLU(inplace=True)
+    (20): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(7, 7))
+  (classifier): Sequential(
+    (0): Linear(in_features=25088, out_features=4096, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=4096, out_features=4096, bias=True)
+    (4): ReLU(inplace=True)
+    (5): Dropout(p=0.5, inplace=False)
+    (6): Linear(in_features=4096, out_features=100, bias=True)
+  )
+)
+*********************
+Retain set accuracy: 100.0%
+Forget set accuracy: 54.6%
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+
+start_print
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/vgg11/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='vgg11', shadow_arch='ResNet18', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False, SHADOW_IDXs=[0], SUFFIX='cifar100_retrain_set_random_500')
+dict_keys(['p_Unleak', 'p_LiRA', 'p_LiRA_Online', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_RMIA_online', 'p_IPapprox_proby', 'p_IPapprox_proby_simp', 'p_IPapprox_tsm', 'p_IPapprox_tsm_simp', 'p_IPapprox_carlogi', 'p_IPapprox_carlogi_simp', 'p_IPapprox_losy', 'p_IPapprox_losy_simp', 'p_IPapprox_simp_online', 'p_IPapprox_simp_offline', 'p_IPapprox_simp_online_wo_norm'])
+Metric values                  auc    acc    tpr0.0 .-5    .-2    tnr0.0 .-5    .-2    1-mean 1-std  0-mean 0-std  cm-std1 cm-std0
+p_Unleak                       0.8737 0.8152 0.0441 0.0441 0.1714 0.0000 0.0076 0.5977 0.7017 0.3633 0.2264 0.0859
+p_LiRA                         0.7784 0.7306 0.0004 0.0004 0.0145 0.0000 0.00e+00 9.89e-02 -2.98e+61 5.02e+61 -6.42e+61 5.05e+61
+p_LiRA_Online                  0.8685 0.8291 0.0006 0.0006 0.0187 0.1480 1.48e-01 6.01e-01 4.02e+61 9.57e+61 -5.88e+61 4.99e+61
+p_update_LiRA                  0.7162 0.7156 0.0000 0.0000 0.0198 0.0000 0.0009 0.4389 0.4340 0.4996 -0.0009 0.1032
+p_EMIA                         0.8059 0.7679 0.0000 0.0000 0.0104 0.0460 0.0460 0.3769 0.0336 0.1121 0.0000 0.0030
+p_EMIA_p                       0.7639 0.7464 0.0001 0.0001 0.0109 0.1340 0.1794 0.4525 0.5433 0.2774 0.2949 0.1435
+p_RMIA                         0.8672 0.7691 0.0361 0.0361 0.2783 0.1280 0.1746 0.4320 0.7429 0.1590 0.4449 0.2182
+p_RMIA_online                  0.9024 0.8036 0.1393 0.1393 0.3194 0.0840 0.1690 0.5440 0.7523 0.1300 0.5213 0.1305
+p_IPapprox_proby               0.8768 0.8216 0.0175 0.0175 0.1124 0.0000 0.1068 0.6191 0.4529 0.4118 0.0010 0.0251
+p_IPapprox_proby_simp          0.8754 0.7924 0.1588 0.1588 0.1941 0.1460 0.1460 0.5883 0.6868 0.3052 0.2311 0.2067
+p_IPapprox_tsm                 0.8712 0.8193 0.0107 0.0107 0.0337 0.0820 0.0820 0.5842 0.4715 0.3038 0.0226 0.1939
+p_IPapprox_tsm_simp            0.8960 0.8218 0.0109 0.0109 0.2313 0.0140 0.0140 0.5070 0.7456 0.2474 0.3028 0.2068
+p_IPapprox_carlogi             0.8826 0.8236 0.0131 0.0131 0.0420 0.0900 0.0900 0.5921 0.5038 0.3035 0.0250 0.1926
+p_IPapprox_carlogi_simp        0.8846 0.8335 0.0015 0.0015 0.0546 0.0000 0.0696 0.6081 0.7398 0.2947 0.2642 0.1773
+p_IPapprox_losy                0.8773 0.8235 0.0245 0.0245 0.1206 0.3780 0.3780 0.6219 0.3775 0.3864 0.0002 0.0121
+p_IPapprox_losy_simp           0.8550 0.7799 0.0496 0.0496 0.1700 0.4040 0.4170 0.5640 0.6824 0.2802 0.2996 0.1983
+p_IPapprox_simp_online         0.9042 0.8146 0.1361 0.1361 0.2293 0.0360 0.0360 0.6175 0.6928 0.3326 0.1708 0.1467
+p_IPapprox_simp_offline        0.9006 0.8158 0.1246 0.1246 0.2103 0.0360 0.0360 0.6160 0.6449 0.3823 0.0969 0.1131
+p_IPapprox_simp_online_wo_norm 0.9042 0.8146 0.1361 0.1361 0.2293 0.0000 0.0490 0.6175 0.6928 0.3326 0.1708 0.1467
+end_print
+
+
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/vgg11/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='vgg11', shadow_arch='ResNet34', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False)
+shadow_lists: [[0]]
+0-th shadow_list: [0]
+Loop 0, SEED 42
+cifar100_retrain_set_random_500
+Files already downloaded and verified
+Files already downloaded and verified
+dataname: cifar100, train_set: 50000, held_out: 10000
+len of train_set:  50000
+init_train_set: 30000
+cifar100 shadow_origin training
+model_path: LIRA_checkpoints/weights_resnet18_cifar100arch_vgg11.pth
+Train set accuracy: 100.0%
+Test set accuracy: 57.4%
+model_path: LIRA_checkpoints/unle_models/retrain_weights_resnet18_cifar100_cifar100_retrain_set_random_500_seed_42arch_vgg11.pth
+VGG(
+  (features): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): ReLU(inplace=True)
+    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (7): ReLU(inplace=True)
+    (8): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (9): ReLU(inplace=True)
+    (10): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (11): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (12): ReLU(inplace=True)
+    (13): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (14): ReLU(inplace=True)
+    (15): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (16): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (19): ReLU(inplace=True)
+    (20): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(7, 7))
+  (classifier): Sequential(
+    (0): Linear(in_features=25088, out_features=4096, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=4096, out_features=4096, bias=True)
+    (4): ReLU(inplace=True)
+    (5): Dropout(p=0.5, inplace=False)
+    (6): Linear(in_features=4096, out_features=100, bias=True)
+  )
+)
+*********************
+Retain set accuracy: 100.0%
+Forget set accuracy: 54.6%
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+
+start_print
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/vgg11/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='vgg11', shadow_arch='ResNet34', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False, SHADOW_IDXs=[0], SUFFIX='cifar100_retrain_set_random_500')
+dict_keys(['p_Unleak', 'p_LiRA', 'p_LiRA_Online', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_RMIA_online', 'p_IPapprox_proby', 'p_IPapprox_proby_simp', 'p_IPapprox_tsm', 'p_IPapprox_tsm_simp', 'p_IPapprox_carlogi', 'p_IPapprox_carlogi_simp', 'p_IPapprox_losy', 'p_IPapprox_losy_simp', 'p_IPapprox_simp_online', 'p_IPapprox_simp_offline', 'p_IPapprox_simp_online_wo_norm'])
+Metric values                  auc    acc    tpr0.0 .-5    .-2    tnr0.0 .-5    .-2    1-mean 1-std  0-mean 0-std  cm-std1 cm-std0
+p_Unleak                       0.8737 0.8152 0.0441 0.0441 0.1714 0.0000 0.0076 0.5977 0.7017 0.3633 0.2264 0.0859
+p_LiRA                         0.7802 0.7338 0.0002 0.0002 0.0172 0.0000 0.00e+00 8.45e-02 -2.95e+61 5.06e+61 -6.52e+61 5.13e+61
+p_LiRA_Online                  0.8707 0.8251 0.0003 0.0003 0.0224 0.1580 1.62e-01 5.90e-01 4.05e+61 9.64e+61 -5.98e+61 5.09e+61
+p_update_LiRA                  0.7029 0.7020 0.0000 0.0000 0.0199 0.0000 0.0007 0.4124 0.4080 0.4955 -0.0005 0.1114
+p_EMIA                         0.8047 0.7666 0.0000 0.0000 0.0145 0.0000 0.0068 0.3676 0.0384 0.1166 0.0001 0.0053
+p_EMIA_p                       0.7639 0.7464 0.0001 0.0001 0.0109 0.1340 0.1794 0.4525 0.5433 0.2774 0.2949 0.1435
+p_RMIA                         0.8614 0.7611 0.0442 0.0442 0.2504 0.1800 0.1936 0.4547 0.7419 0.1595 0.4495 0.2164
+p_RMIA_online                  0.8996 0.8028 0.1649 0.1649 0.2599 0.0360 0.1180 0.5460 0.7519 0.1307 0.5246 0.1279
+p_IPapprox_proby               0.8768 0.8209 0.0183 0.0183 0.1181 0.3420 0.3420 0.6184 0.4471 0.4104 0.0009 0.0248
+p_IPapprox_proby_simp          0.8698 0.7869 0.1127 0.1127 0.2672 0.1380 0.1380 0.5729 0.6794 0.3096 0.2336 0.2088
+p_IPapprox_tsm                 0.8704 0.8158 0.0105 0.0105 0.0349 0.1160 0.1160 0.5700 0.4683 0.3031 0.0225 0.1939
+p_IPapprox_tsm_simp            0.8957 0.8224 0.0103 0.0103 0.1753 0.0040 0.0040 0.5209 0.7449 0.2477 0.3029 0.2066
+p_IPapprox_carlogi             0.8825 0.8217 0.0111 0.0111 0.0331 0.0000 0.0254 0.5780 0.5002 0.3025 0.0245 0.1925
+p_IPapprox_carlogi_simp        0.8861 0.8316 0.0013 0.0013 0.0553 0.2440 0.2440 0.6020 0.7391 0.2914 0.2659 0.1778
+p_IPapprox_losy                0.8779 0.8219 0.0247 0.0247 0.1212 0.4300 0.4300 0.6236 0.3728 0.3871 0.0002 0.0109
+p_IPapprox_losy_simp           0.8436 0.7707 0.0806 0.0806 0.2014 0.4020 0.4020 0.5407 0.6718 0.2855 0.3021 0.1991
+p_IPapprox_simp_online         0.9065 0.8183 0.1318 0.1318 0.3183 0.0000 0.0342 0.6119 0.6933 0.3265 0.1760 0.1497
+p_IPapprox_simp_offline        0.9023 0.8185 0.1017 0.1017 0.2778 0.0400 0.0400 0.6056 0.6455 0.3760 0.1018 0.1158
+p_IPapprox_simp_online_wo_norm 0.9065 0.8183 0.1318 0.1318 0.3183 0.0440 0.0652 0.6119 0.6933 0.3265 0.1760 0.1497
+end_print
+
+
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/vgg11/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='vgg11', shadow_arch='ResNet50', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False)
+shadow_lists: [[0]]
+0-th shadow_list: [0]
+Loop 0, SEED 42
+cifar100_retrain_set_random_500
+Files already downloaded and verified
+Files already downloaded and verified
+dataname: cifar100, train_set: 50000, held_out: 10000
+len of train_set:  50000
+init_train_set: 30000
+cifar100 shadow_origin training
+model_path: LIRA_checkpoints/weights_resnet18_cifar100arch_vgg11.pth
+Train set accuracy: 100.0%
+Test set accuracy: 57.4%
+model_path: LIRA_checkpoints/unle_models/retrain_weights_resnet18_cifar100_cifar100_retrain_set_random_500_seed_42arch_vgg11.pth
+VGG(
+  (features): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): ReLU(inplace=True)
+    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (7): ReLU(inplace=True)
+    (8): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (9): ReLU(inplace=True)
+    (10): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (11): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (12): ReLU(inplace=True)
+    (13): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (14): ReLU(inplace=True)
+    (15): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (16): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (19): ReLU(inplace=True)
+    (20): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(7, 7))
+  (classifier): Sequential(
+    (0): Linear(in_features=25088, out_features=4096, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=4096, out_features=4096, bias=True)
+    (4): ReLU(inplace=True)
+    (5): Dropout(p=0.5, inplace=False)
+    (6): Linear(in_features=4096, out_features=100, bias=True)
+  )
+)
+*********************
+Retain set accuracy: 100.0%
+Forget set accuracy: 54.6%
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+
+start_print
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/vgg11/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='vgg11', shadow_arch='ResNet50', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False, SHADOW_IDXs=[0], SUFFIX='cifar100_retrain_set_random_500')
+dict_keys(['p_Unleak', 'p_LiRA', 'p_LiRA_Online', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_RMIA_online', 'p_IPapprox_proby', 'p_IPapprox_proby_simp', 'p_IPapprox_tsm', 'p_IPapprox_tsm_simp', 'p_IPapprox_carlogi', 'p_IPapprox_carlogi_simp', 'p_IPapprox_losy', 'p_IPapprox_losy_simp', 'p_IPapprox_simp_online', 'p_IPapprox_simp_offline', 'p_IPapprox_simp_online_wo_norm'])
+Metric values                  auc    acc    tpr0.0 .-5    .-2    tnr0.0 .-5    .-2    1-mean 1-std  0-mean 0-std  cm-std1 cm-std0
+p_Unleak                       0.8737 0.8152 0.0441 0.0441 0.1714 0.0000 0.0076 0.5977 0.7017 0.3633 0.2264 0.0859
+p_LiRA                         0.7650 0.7145 0.0001 0.0001 0.0109 0.0000 0.00e+00 8.04e-02 -2.98e+61 4.94e+61 -6.43e+61 5.13e+61
+p_LiRA_Online                  0.8665 0.8231 0.0002 0.0002 0.0174 0.1520 1.52e-01 5.76e-01 4.02e+61 9.69e+61 -5.89e+61 5.10e+61
+p_update_LiRA                  0.7070 0.7044 0.0090 0.0090 0.0259 0.0000 0.0006 0.4176 0.4160 0.4929 -0.0018 0.1275
+p_EMIA                         0.8014 0.7634 0.0000 0.0000 0.0073 0.0000 0.0171 0.3440 0.0447 0.1256 0.0001 0.0047
+p_EMIA_p                       0.7639 0.7464 0.0001 0.0001 0.0109 0.1340 0.1794 0.4525 0.5433 0.2774 0.2949 0.1435
+p_RMIA                         0.8558 0.7594 0.0491 0.0491 0.2196 0.0440 0.1048 0.4506 0.7316 0.1708 0.4421 0.2150
+p_RMIA_online                  0.8933 0.8018 0.0978 0.0978 0.2559 0.0180 0.1095 0.5500 0.7467 0.1357 0.5189 0.1279
+p_IPapprox_proby               0.8772 0.8224 0.0200 0.0200 0.1520 0.0000 0.1062 0.6140 0.4443 0.4087 0.0008 0.0253
+p_IPapprox_proby_simp          0.8632 0.7863 0.0655 0.0655 0.2130 0.0000 0.1074 0.5780 0.6790 0.3112 0.2393 0.2102
+p_IPapprox_tsm                 0.8708 0.8186 0.0081 0.0081 0.0310 0.0760 0.0760 0.5598 0.4699 0.3039 0.0230 0.1947
+p_IPapprox_tsm_simp            0.8894 0.8253 0.0110 0.0110 0.1860 0.0080 0.0080 0.5155 0.7410 0.2553 0.3023 0.2063
+p_IPapprox_carlogi             0.8823 0.8227 0.0090 0.0090 0.0328 0.0000 0.0513 0.5730 0.4936 0.2998 0.0234 0.1939
+p_IPapprox_carlogi_simp        0.8832 0.8315 0.0014 0.0014 0.0729 0.1860 0.1860 0.5840 0.7371 0.2888 0.2726 0.1799
+p_IPapprox_losy                0.8771 0.8196 0.0259 0.0259 0.1295 0.3840 0.3840 0.6127 0.3651 0.3815 0.0001 0.0113
+p_IPapprox_losy_simp           0.8332 0.7706 0.0105 0.0105 0.1076 0.3980 0.3980 0.5380 0.6656 0.2867 0.3086 0.1985
+p_IPapprox_simp_online         0.8965 0.8153 0.0435 0.0435 0.2374 0.0520 0.0520 0.6047 0.6919 0.3303 0.1835 0.1533
+p_IPapprox_simp_offline        0.8928 0.8130 0.0174 0.0174 0.1958 0.0480 0.0480 0.6062 0.6451 0.3778 0.1084 0.1189
+p_IPapprox_simp_online_wo_norm 0.8965 0.8153 0.0435 0.0435 0.2374 0.0000 0.0153 0.6060 0.6919 0.3303 0.1835 0.1533
+end_print
+
+
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/vgg11/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='vgg11', shadow_arch='vgg16', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False)
+shadow_lists: [[0]]
+0-th shadow_list: [0]
+Loop 0, SEED 42
+cifar100_retrain_set_random_500
+Files already downloaded and verified
+Files already downloaded and verified
+dataname: cifar100, train_set: 50000, held_out: 10000
+len of train_set:  50000
+init_train_set: 30000
+cifar100 shadow_origin training
+model_path: LIRA_checkpoints/weights_resnet18_cifar100arch_vgg11.pth
+Train set accuracy: 100.0%
+Test set accuracy: 57.4%
+model_path: LIRA_checkpoints/unle_models/retrain_weights_resnet18_cifar100_cifar100_retrain_set_random_500_seed_42arch_vgg11.pth
+VGG(
+  (features): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): ReLU(inplace=True)
+    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (7): ReLU(inplace=True)
+    (8): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (9): ReLU(inplace=True)
+    (10): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (11): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (12): ReLU(inplace=True)
+    (13): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (14): ReLU(inplace=True)
+    (15): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (16): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (19): ReLU(inplace=True)
+    (20): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(7, 7))
+  (classifier): Sequential(
+    (0): Linear(in_features=25088, out_features=4096, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=4096, out_features=4096, bias=True)
+    (4): ReLU(inplace=True)
+    (5): Dropout(p=0.5, inplace=False)
+    (6): Linear(in_features=4096, out_features=100, bias=True)
+  )
+)
+*********************
+Retain set accuracy: 100.0%
+Forget set accuracy: 54.6%
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+
+start_print
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/vgg11/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='vgg11', shadow_arch='vgg16', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False, SHADOW_IDXs=[0], SUFFIX='cifar100_retrain_set_random_500')
+dict_keys(['p_Unleak', 'p_LiRA', 'p_LiRA_Online', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_RMIA_online', 'p_IPapprox_proby', 'p_IPapprox_proby_simp', 'p_IPapprox_tsm', 'p_IPapprox_tsm_simp', 'p_IPapprox_carlogi', 'p_IPapprox_carlogi_simp', 'p_IPapprox_losy', 'p_IPapprox_losy_simp', 'p_IPapprox_simp_online', 'p_IPapprox_simp_offline', 'p_IPapprox_simp_online_wo_norm'])
+Metric values                  auc    acc    tpr0.0 .-5    .-2    tnr0.0 .-5    .-2    1-mean 1-std  0-mean 0-std  cm-std1 cm-std0
+p_Unleak                       0.8737 0.8152 0.0441 0.0441 0.1714 0.0000 0.0076 0.5977 0.7017 0.3633 0.2264 0.0859
+p_LiRA                         0.6879 0.6532 0.0382 0.0382 0.1014 0.0000 0.00e+00 1.89e-02 -4.17e+61 6.17e+61 -1.12e+62 1.31e+62
+p_LiRA_Online                  0.8261 0.7500 0.0379 0.0379 0.1577 0.1220 1.35e-01 4.28e-01 2.83e+61 1.09e+62 -1.06e+62 1.32e+62
+p_update_LiRA                  0.6205 0.6124 0.0000 0.0000 0.0350 0.0000 0.0001 0.0776 0.2500 0.4511 0.0008 0.2563
+p_EMIA                         0.7553 0.6865 0.0294 0.0294 0.0894 0.0000 0.0295 0.3468 0.3229 0.2286 0.1716 0.2283
+p_EMIA_p                       0.7639 0.7464 0.0001 0.0001 0.0109 0.1340 0.1794 0.4525 0.5433 0.2774 0.2949 0.1435
+p_RMIA                         0.8560 0.7670 0.0343 0.0343 0.1268 0.2500 0.2594 0.4700 0.7274 0.1740 0.4519 0.2077
+p_RMIA_online                  0.8978 0.8097 0.0659 0.0659 0.2652 0.1060 0.1744 0.5420 0.7446 0.1354 0.5258 0.1180
+p_IPapprox_proby               0.8754 0.8219 0.0165 0.0165 0.1146 0.0000 0.1062 0.6057 0.4394 0.4095 0.0009 0.0229
+p_IPapprox_proby_simp          0.8637 0.7887 0.0386 0.0386 0.2270 0.1000 0.1000 0.5750 0.6654 0.3183 0.2377 0.2227
+p_IPapprox_tsm                 0.8710 0.8194 0.0135 0.0135 0.0460 0.0000 0.0566 0.5726 0.4821 0.3078 0.0255 0.1963
+p_IPapprox_tsm_simp            0.8909 0.8258 0.0112 0.0112 0.1637 0.0000 0.0053 0.5260 0.7320 0.2642 0.2835 0.1972
+p_IPapprox_carlogi             0.8789 0.8191 0.0024 0.0024 0.0278 0.1140 0.1140 0.5380 0.4001 0.2669 0.0101 0.1689
+p_IPapprox_carlogi_simp        0.8860 0.8146 0.0168 0.0168 0.1593 0.0400 0.0400 0.3386 0.7132 0.2201 0.3342 0.1972
+p_IPapprox_losy                0.8758 0.8184 0.0257 0.0257 0.1219 0.4400 0.4400 0.6136 0.2823 0.3236 0.0000 0.0047
+p_IPapprox_losy_simp           0.7985 0.7493 0.0232 0.0232 0.0585 0.3460 0.3460 0.4920 0.5812 0.2654 0.3126 0.2019
+p_IPapprox_simp_online         0.8928 0.8129 0.0366 0.0366 0.2104 0.0620 0.0703 0.6091 0.6895 0.3066 0.2126 0.1731
+p_IPapprox_simp_offline        0.8869 0.8111 0.0825 0.0825 0.1379 0.0000 0.0097 0.6060 0.6458 0.3492 0.1410 0.1372
+p_IPapprox_simp_online_wo_norm 0.8928 0.8129 0.0366 0.0366 0.2104 0.0000 0.0266 0.6111 0.6895 0.3066 0.2126 0.1731
+end_print
+
+
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/vgg11/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='vgg11', shadow_arch='vgg11', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False)
+shadow_lists: [[0]]
+0-th shadow_list: [0]
+Loop 0, SEED 42
+cifar100_retrain_set_random_500
+Files already downloaded and verified
+Files already downloaded and verified
+dataname: cifar100, train_set: 50000, held_out: 10000
+len of train_set:  50000
+init_train_set: 30000
+cifar100 shadow_origin training
+model_path: LIRA_checkpoints/weights_resnet18_cifar100arch_vgg11.pth
+Train set accuracy: 100.0%
+Test set accuracy: 57.4%
+model_path: LIRA_checkpoints/unle_models/retrain_weights_resnet18_cifar100_cifar100_retrain_set_random_500_seed_42arch_vgg11.pth
+VGG(
+  (features): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): ReLU(inplace=True)
+    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (7): ReLU(inplace=True)
+    (8): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (9): ReLU(inplace=True)
+    (10): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (11): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (12): ReLU(inplace=True)
+    (13): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (14): ReLU(inplace=True)
+    (15): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (16): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (19): ReLU(inplace=True)
+    (20): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(7, 7))
+  (classifier): Sequential(
+    (0): Linear(in_features=25088, out_features=4096, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=4096, out_features=4096, bias=True)
+    (4): ReLU(inplace=True)
+    (5): Dropout(p=0.5, inplace=False)
+    (6): Linear(in_features=4096, out_features=100, bias=True)
+  )
+)
+*********************
+Retain set accuracy: 100.0%
+Forget set accuracy: 54.6%
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+
+start_print
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/vgg11/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='vgg11', shadow_arch='vgg11', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False, SHADOW_IDXs=[0], SUFFIX='cifar100_retrain_set_random_500')
+dict_keys(['p_Unleak', 'p_LiRA', 'p_LiRA_Online', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_RMIA_online', 'p_IPapprox_proby', 'p_IPapprox_proby_simp', 'p_IPapprox_tsm', 'p_IPapprox_tsm_simp', 'p_IPapprox_carlogi', 'p_IPapprox_carlogi_simp', 'p_IPapprox_losy', 'p_IPapprox_losy_simp', 'p_IPapprox_simp_online', 'p_IPapprox_simp_offline', 'p_IPapprox_simp_online_wo_norm'])
+Metric values                  auc    acc    tpr0.0 .-5    .-2    tnr0.0 .-5    .-2    1-mean 1-std  0-mean 0-std  cm-std1 cm-std0
+p_Unleak                       0.8737 0.8152 0.0441 0.0441 0.1714 0.0000 0.0076 0.5977 0.7017 0.3633 0.2264 0.0859
+p_LiRA                         0.7242 0.6855 0.0624 0.0624 0.1462 0.0000 0.00e+00 6.00e-03 -3.44e+61 4.80e+61 -1.06e+62 1.19e+62
+p_LiRA_Online                  0.8521 0.7634 0.0594 0.0594 0.1968 0.1340 1.34e-01 4.74e-01 3.56e+61 1.03e+62 -1.01e+62 1.20e+62
+p_update_LiRA                  0.6205 0.6178 0.0000 0.0000 0.0185 0.0000 0.0001 0.0990 0.2480 0.4631 0.0005 0.2289
+p_EMIA                         0.7699 0.6871 0.0381 0.0381 0.0936 0.1780 0.1780 0.3181 0.2699 0.2375 0.1111 0.1988
+p_EMIA_p                       0.7639 0.7464 0.0001 0.0001 0.0109 0.1340 0.1794 0.4525 0.5433 0.2774 0.2949 0.1435
+p_RMIA                         0.8667 0.7768 0.0079 0.0079 0.1494 0.1040 0.1379 0.4420 0.7338 0.1690 0.4428 0.2143
+p_RMIA_online                  0.9027 0.8078 0.1091 0.1091 0.2741 0.1340 0.2131 0.5432 0.7480 0.1326 0.5217 0.1254
+p_IPapprox_proby               0.8762 0.8214 0.0160 0.0160 0.1112 0.3620 0.3620 0.6067 0.4422 0.4106 0.0008 0.0235
+p_IPapprox_proby_simp          0.8662 0.7832 0.1089 0.1089 0.2283 0.1020 0.1020 0.5706 0.6656 0.3167 0.2252 0.2196
+p_IPapprox_tsm                 0.8712 0.8176 0.0104 0.0104 0.0440 0.1560 0.1560 0.5760 0.4751 0.3043 0.0238 0.1936
+p_IPapprox_tsm_simp            0.8975 0.8279 0.0113 0.0113 0.1580 0.0360 0.0360 0.5174 0.7404 0.2502 0.2938 0.2018
+p_IPapprox_carlogi             0.8799 0.8182 0.0047 0.0047 0.0221 0.1540 0.1540 0.5407 0.4143 0.2728 0.0117 0.1722
+p_IPapprox_carlogi_simp        0.8923 0.8255 0.0120 0.0120 0.1726 0.0000 0.0077 0.3760 0.7163 0.2255 0.3212 0.1929
+p_IPapprox_losy                0.8772 0.8209 0.0253 0.0253 0.1209 0.4220 0.4285 0.6116 0.2885 0.3263 0.0001 0.0058
+p_IPapprox_losy_simp           0.8082 0.7469 0.0513 0.0513 0.0906 0.0000 0.1038 0.4967 0.5926 0.2608 0.3072 0.1997
+p_IPapprox_simp_online         0.8950 0.8097 0.0945 0.0945 0.2380 0.1000 0.1035 0.6100 0.6873 0.3099 0.1995 0.1682
+p_IPapprox_simp_offline        0.8892 0.8071 0.0407 0.0407 0.1758 0.0000 0.0195 0.6060 0.6425 0.3537 0.1292 0.1316
+p_IPapprox_simp_online_wo_norm 0.8950 0.8097 0.0945 0.0945 0.2380 0.1000 0.1000 0.6100 0.6873 0.3099 0.1995 0.1682
+end_print
+
+
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/vgg11/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='vgg11', shadow_arch='DenseNet', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False)
+shadow_lists: [[0]]
+0-th shadow_list: [0]
+Loop 0, SEED 42
+cifar100_retrain_set_random_500
+Files already downloaded and verified
+Files already downloaded and verified
+dataname: cifar100, train_set: 50000, held_out: 10000
+len of train_set:  50000
+init_train_set: 30000
+cifar100 shadow_origin training
+model_path: LIRA_checkpoints/weights_resnet18_cifar100arch_vgg11.pth
+Train set accuracy: 100.0%
+Test set accuracy: 57.4%
+model_path: LIRA_checkpoints/unle_models/retrain_weights_resnet18_cifar100_cifar100_retrain_set_random_500_seed_42arch_vgg11.pth
+VGG(
+  (features): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): ReLU(inplace=True)
+    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (7): ReLU(inplace=True)
+    (8): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (9): ReLU(inplace=True)
+    (10): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (11): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (12): ReLU(inplace=True)
+    (13): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (14): ReLU(inplace=True)
+    (15): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (16): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (19): ReLU(inplace=True)
+    (20): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(7, 7))
+  (classifier): Sequential(
+    (0): Linear(in_features=25088, out_features=4096, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=4096, out_features=4096, bias=True)
+    (4): ReLU(inplace=True)
+    (5): Dropout(p=0.5, inplace=False)
+    (6): Linear(in_features=4096, out_features=100, bias=True)
+  )
+)
+*********************
+Retain set accuracy: 100.0%
+Forget set accuracy: 54.6%
+Load trained attack model
+p_Unleak done
+p_LiRA done
+p_update_LiRA done
+p_EMIA done
+p_EMIA_p done
+p_RMIA done
+p_IPapprox_proby_simp done
+p_IPapprox_tsm_simp done
+p_IPapprox_carlogi_simp done
+p_IPapprox_losy_simp done
+p_IPapprox_simp_online done
+p_IPapprox_simp_offline done
+p_IPapprox_simp_online_wo_norm done
+
+start_print
+Namespace(dataname='cifar100', unlearn_method='retrain', unlearn_type='set_random', forget_class=0, forget_size=500, forget_class_ratio=0.5, model_numbs=1, SHADOW_AVE_FLAG=True, LOOP=1, EXACT_FLAG=False, shadow_folder='LIRA_checkpoints/shadow_models/', records_folder='/ibex/project/c2283/Evaluate-Unlearning/records/vgg11/', SEED_init=42, CLASS_init=0, shift_type='shadow_data', model_arch='vgg11', shadow_arch='DenseNet', INTERAPPROX=100, metrics=['p_Unleak', 'p_LiRA', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_interapprox'], MODEL_CHECK=False, SHADOW_IDXs=[0], SUFFIX='cifar100_retrain_set_random_500')
+dict_keys(['p_Unleak', 'p_LiRA', 'p_LiRA_Online', 'p_update_LiRA', 'p_EMIA', 'p_EMIA_p', 'p_RMIA', 'p_RMIA_online', 'p_IPapprox_proby', 'p_IPapprox_proby_simp', 'p_IPapprox_tsm', 'p_IPapprox_tsm_simp', 'p_IPapprox_carlogi', 'p_IPapprox_carlogi_simp', 'p_IPapprox_losy', 'p_IPapprox_losy_simp', 'p_IPapprox_simp_online', 'p_IPapprox_simp_offline', 'p_IPapprox_simp_online_wo_norm'])
+Metric values                  auc    acc    tpr0.0 .-5    .-2    tnr0.0 .-5    .-2    1-mean 1-std  0-mean 0-std  cm-std1 cm-std0
+p_Unleak                       0.8737 0.8152 0.0441 0.0441 0.1714 0.0000 0.0076 0.5977 0.7017 0.3633 0.2264 0.0859
+p_LiRA                         0.8044 0.7536 0.0003 0.0003 0.0250 0.0000 0.00e+00 1.98e-01 -3.40e+61 5.30e+61 -8.02e+61 5.61e+61
+p_LiRA_Online                  0.8583 0.8199 0.0004 0.0004 0.0215 0.1640 1.64e-01 6.04e-01 3.61e+61 1.06e+62 -7.48e+61 5.54e+61
+p_update_LiRA                  0.6917 0.6910 0.0023 0.0024 0.0185 0.0000 0.0019 0.3889 0.3840 0.4864 -0.0003 0.0664
+p_EMIA                         0.7976 0.7590 0.0000 0.0000 0.0124 0.0920 0.1003 0.4070 0.0224 0.0853 0.0000 0.0003
+p_EMIA_p                       0.7639 0.7464 0.0001 0.0001 0.0109 0.1340 0.1794 0.4525 0.5433 0.2774 0.2949 0.1435
+p_RMIA                         0.8489 0.7558 0.0238 0.0238 0.1129 0.0320 0.1058 0.4300 0.7280 0.1826 0.4407 0.2093
+p_RMIA_online                  0.8905 0.8017 0.1309 0.1309 0.2908 0.1220 0.1857 0.5340 0.7487 0.1341 0.5280 0.1230
+p_IPapprox_proby               0.8757 0.8193 0.0126 0.0126 0.1196 0.0000 0.1121 0.6092 0.4625 0.4228 0.0010 0.0231
+p_IPapprox_proby_simp          0.8582 0.7760 0.1087 0.1087 0.1829 0.0000 0.0248 0.5620 0.6386 0.3485 0.1822 0.2010
+p_IPapprox_tsm                 0.8704 0.8183 0.0108 0.0108 0.0417 0.1700 0.1700 0.5840 0.4788 0.3084 0.0264 0.1828
+p_IPapprox_tsm_simp            0.8885 0.8152 0.0121 0.0121 0.1743 0.0180 0.0180 0.5170 0.7086 0.2693 0.2631 0.1926
+p_IPapprox_carlogi             0.8825 0.8245 0.0048 0.0048 0.0447 0.1260 0.1260 0.5880 0.5018 0.3065 0.0257 0.1797
+p_IPapprox_carlogi_simp        0.8815 0.8286 0.0017 0.0017 0.0614 0.0000 0.0974 0.6060 0.7163 0.3023 0.2440 0.1666
+p_IPapprox_losy                0.8753 0.8217 0.0210 0.0210 0.1062 0.4440 0.4458 0.6201 0.3805 0.3984 0.0002 0.0095
+p_IPapprox_losy_simp           0.8254 0.7576 0.0006 0.0006 0.0726 0.4000 0.4000 0.5220 0.6299 0.3186 0.2529 0.2032
+p_IPapprox_simp_online         0.8915 0.8069 0.1278 0.1278 0.2057 0.0360 0.0779 0.6105 0.6594 0.3578 0.1401 0.1348
+p_IPapprox_simp_offline        0.8874 0.8111 0.0213 0.0213 0.1229 0.0360 0.0360 0.6080 0.6171 0.3988 0.0758 0.1027
+p_IPapprox_simp_online_wo_norm 0.8915 0.8069 0.1278 0.1278 0.2057 0.0360 0.0779 0.6105 0.6594 0.3578 0.1401 0.1348
+end_print
+
+
