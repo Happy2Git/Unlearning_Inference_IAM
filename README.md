@@ -186,12 +186,16 @@ We pretrained **128 shadow models** for more reliable averages.
 If you use IAM or this codebase in your research, please cite our Usenix Security 2025 paper:
 
 ```bibtex
-@inproceedings{yourlastname2025iam,
-  title={Towards Lifecycle Unlearning Commitment Management: Measuring Sample-level Unlearning Completeness},
-  author={Cheng-Long Wang, Qi Li, Zihang Xiang, Yinzhi Cao, Di Wang},
-  booktitle={Proceedings of the 34th USENIX Security Symposium (USENIX Security 25)},
-  year={2025},
-  publisher={USENIX Association}
+@inproceedings{WLXCW25IAM,
+  author       = {Cheng{-}Long Wang and
+                  Qi Li and
+                  Zihang Xiang and
+                  Yinzhi Cao and
+                  Di Wang},
+  title        = {Towards Lifecycle Unlearning Commitment Management: Measuring Sample-level Unlearning Completeness},
+  booktitle    = {34th {USENIX} Security Symposium, {USENIX} Security 2025, SEATTLE, WA, USA, AUGUST 13–15, 2025},
+  publisher    = {{USENIX} Association},
+  year         = {2025},
 }
 ```
 
