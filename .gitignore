@@ -1,3 +1,11 @@
+.vscode
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+# macOS specific files
+.DS_Store
+
 logs/new_records/seed_42/*
 tmp*
 tmp_figures
