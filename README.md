@@ -1,3 +1,29 @@
+<div align="center">
+
+  <h2><b> Towards Lifecycle Unlearning Commitment Management: Measuring Sample-level Unlearning Completeness </b></h2>
+
+</div>
+
+<div align="center">
+
+
+<a href="https://arxiv.org/abs/2506.06112" target="_blank"><img src="https://img.shields.io/badge/arXiv-2506.06112-009688.svg" alt="arXiv"></a>
+
+</div>
+
+
+
+
+
+This repository is for our paper:
+
+> **[Towards Lifecycle Unlearning Commitment Management: Measuring Sample-level Unlearning Completeness](https://arxiv.org/abs/2506.06112)** \
+> [Cheng0-Long Wang](https://scholar.google.ca/citations?user=24UBrN4AAAAJ&hl=en&oi=ao)<sup>1</sup>, [Qi Li](https://scholar.google.ca/citations?user=gsV-g2wAAAAJ&hl=en)<sup>2</sup>, [Zihang Xiang](https://scholar.google.ca/citations?user=A7N2C0kAAAAJ&hl=en&oi=sra)<sup>1</sup>, [Yinzhi Cao](https://scholar.google.ca/citations?user=0jBP_aEAAAAJ&hl=en&oi=sra)<sup>†3</sup>, [Di Wang](https://scholar.google.ca/citations?user=5hGRe_QAAAAJ&hl=en&oi=sra)<sup>†1</sup> \
+> <sup>1</sup> KAUST \
+> <sup>2</sup> NUS \
+> <sup>3</sup> JHU \
+> <sup>†</sup>Corresponding author: di.wang@kaust.edu.sa
+
 # Towards Lifecycle Unlearning Commitment Management: Measuring Sample-level Unlearning Completeness
 
 **This repository contains the official implementation and resources for the paper "Towards Lifecycle Unlearning Commitment Management: Measuring Sample-level Unlearning Completeness," accepted at Usenix Security 2025. The pre-print version of this paper is available on arXiv at: [https://arxiv.org/abs/2506.06112](https://arxiv.org/abs/2506.06112)**
