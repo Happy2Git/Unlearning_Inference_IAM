@@ -18,9 +18,8 @@
 This repository is for our paper:
 
 > **[Towards Lifecycle Unlearning Commitment Management: Measuring Sample-level Unlearning Completeness](https://arxiv.org/abs/2506.06112)** \
-> [Cheng0-Long Wang](https://scholar.google.ca/citations?user=24UBrN4AAAAJ&hl=en&oi=ao)<sup>1</sup>, [Qi Li](https://scholar.google.ca/citations?user=gsV-g2wAAAAJ&hl=en)<sup>1,2</sup>, [Zihang Xiang](https://scholar.google.ca/citations?user=A7N2C0kAAAAJ&hl=en&oi=sra)<sup>1</sup>, [Yinzhi Cao](https://scholar.google.ca/citations?user=0jBP_aEAAAAJ&hl=en&oi=sra)<sup>3</sup>, [Di Wang](https://scholar.google.ca/citations?user=5hGRe_QAAAAJ&hl=en&oi=sra)<sup>†1</sup> \
-> <sup>1</sup> KAUST, <sup>2</sup> NUS, <sup>3</sup> JHU \
-> <sup>†</sup>Corresponding author: di.wang@kaust.edu.sa
+> [Cheng-Long Wang](https://scholar.google.ca/citations?user=24UBrN4AAAAJ&hl=en&oi=ao)<sup>1</sup>, [Qi Li](https://scholar.google.ca/citations?user=gsV-g2wAAAAJ&hl=en)<sup>1,2</sup>, [Zihang Xiang](https://scholar.google.ca/citations?user=A7N2C0kAAAAJ&hl=en&oi=sra)<sup>1</sup>, [Yinzhi Cao](https://scholar.google.ca/citations?user=0jBP_aEAAAAJ&hl=en&oi=sra)<sup>3</sup>, [Di Wang](https://scholar.google.ca/citations?user=5hGRe_QAAAAJ&hl=en&oi=sra)<sup>†1</sup> \
+> <sup>1</sup> KAUST, <sup>2</sup> NUS, <sup>3</sup> JHU
 
 ---
 
